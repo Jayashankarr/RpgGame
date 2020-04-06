@@ -2,7 +2,7 @@
 #include "Game.h"
 #include <fstream>
 #include "System/EntityComponent.h"
-#include "System\Components.h"
+#include "System/Components.h"
 
 extern Manager manager;
 
