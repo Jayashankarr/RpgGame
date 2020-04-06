@@ -15,6 +15,7 @@ public:
 	void clean();
 
 	bool IsRunning() { return isRunning; }
+	static SDL_Renderer* Renderer;
 
 private:
 	bool isRunning;

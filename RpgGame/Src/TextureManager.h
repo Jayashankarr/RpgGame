@@ -1,14 +1,13 @@
 #pragma once
 #include "SDL.h"
 #include "SDL_image.h"
+#include "Game.h"
 
 class TextureManager
 {
 public:
-	//TextureManager();
-	//~TextureManager();
-
-	SDL_Texture* CreateTexture(const char* fileName, SDL_Renderer* renderer);
+	
+	static SDL_Texture* CreateTexture(const char* filePath);
 
 private:
 

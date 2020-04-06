@@ -1,5 +1,7 @@
 #include "Game.h"
 
+SDL_Renderer* Game::Renderer = nullptr;
+
 Game::Game()
 {
 
@@ -16,6 +18,7 @@ void Game::Init(const char* title, int xpos, int ypos, int width, int height, bo
 	{
 		window = SDL_CreateWindow(title, xpos, ypos, width, height, fullscreen);
 		renderer = SDL_CreateRenderer(window, -1, 0);
+		Renderer = renderer;
 		isRunning = true;
 	}
 	else
