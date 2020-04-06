@@ -1,19 +1,20 @@
 #pragma once
+#include <string>
 
-#include "SDL.h"
-class Map
+class Map 
 {
 public:
-	Map();
+	 
+	Map(std::string tID, int ms, int ts);
 	~Map();
 
-	void CreateMap();
-	void DrawMap();
+	void LoadMap(std::string path, int sizeX, int sizeY);
+	void AddTile(int srcX, int srcY, int xpos, int ypos);
 
 private:
-	SDL_Rect src, dest;
+	std::string texID;
+	int mapScale;
+	int tileSize;
+	int scaledSize;
 
-	SDL_Texture* dirt;
-	SDL_Texture* grass;
-	SDL_Texture* water;
 };
